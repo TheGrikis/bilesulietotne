@@ -3,13 +3,13 @@
       <div class="card-img-overlay">
       <div class="row">
           <div class="col-6">
-              <h5 class="text-uppercase"><strong>{{$tick->events->places->name}}</strong></h5>
+              <h5 class="text-uppercase"><strong class="info-text">{{$tick->events->places->name}}</strong></h5>
           </div>
           <div class="col-6 text-right">
               <h5 class="text-uppercase">
-                  <strong>{{date('d.M.y', strtotime($tick->events->date))}}</strong>
+                  <strong class="info-text">{{date('d.M.y', strtotime($tick->events->date))}}</strong>
                   <br>
-                  <strong>{{date('h:t', strtotime($tick->events->date))}}</strong>
+                  <strong class="info-text">{{date('h:t', strtotime($tick->events->date))}}</strong>
               </h5>
           </div>
       </div>
@@ -18,11 +18,11 @@
             <h5 class="text-uppercase">
               <div class="row  text-nowrap">
                 <div class="col-6 col-sm-12">
-                  <p>Sektors</p>
+                  <p class="info-text">Sektors</p>
                 </div>
                 <div class="w-100 d-none d-sm-block"></div>
                 <div class="col-6 col-sm-12">
-                  <strong>{{ $tick->sector }}</strong>
+                  <strong class="info-text">{{ $tick->sector }}</strong>
                 </div>
               </div>
             </h5>
@@ -31,11 +31,11 @@
             <h5 class="text-uppercase">
               <div class="row">
                 <div class="col-6 col-sm-12">
-                  <p>Rinda</p>
+                  <p class="info-text">Rinda</p>
                 </div>
                 <div class="w-100 d-none d-sm-block"></div>
                 <div class="col-6 col-sm-12">
-                  <strong>{{ $tick->row }}</strong>
+                  <strong class="info-text">{{ $tick->row }}</strong>
                 </div>
               </div>
             </h5>
@@ -44,11 +44,11 @@
             <h5 class="text-uppercase">
               <div class="row">
                 <div class="col-6 col-sm-12">
-                  <p>Vieta</p>
+                  <p class="info-text">Vieta</p>
                 </div>
                 <div class="w-100 d-none d-sm-block"></div>
                 <div class="col-6 col-sm-12">
-                  <strong>{{ $tick->seat }}</strong>
+                  <strong class="info-text">{{ $tick->seat }}</strong>
                 </div>
               </div>
             </h5>
