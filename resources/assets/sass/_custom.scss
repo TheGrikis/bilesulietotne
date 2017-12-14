@@ -1,0 +1,109 @@
+/* The heart of the matter */
+.testimonial-group > .row {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.testimonial-group > .row > .col-xs-8 {
+  display: inline-block;
+  float: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#map{
+  height: calc(100vh - 45px);
+  width: 100%;
+	filter: invert(80%) hue-rotate(180deg) contrast(165%) saturate(20%) brightness(150%) grayscale(100%);
+}
+
+.navbar {
+  margin: 0;
+}
+
+.ticket {
+  padding-top: 10px;
+  margin-top:30px;
+  background-color: rgb(20,20,20);
+}
+
+.ticket-dark-overlay{
+    background-color: rgba(255,0,0,100)
+}
+
+.list-group-item-dark{
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
+
+.card {
+  //max-width: 400px;
+  //min-width: 250px;
+
+}
+
+body{
+  background-color: black;
+}
+
+dl {
+  max-height: 10px
+}
+
+html {
+  font-size: 1rem;
+}
+
+/*
+@include media-breakpoint-up(xs) {
+  html {
+    font-size: 0.7rem;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 1.4vw;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.3vw;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.2vw;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  html {
+    font-size: 0.6vw;
+  }
+}
+
+.ticket-info{
+
+}
+
+.card-columns {
+  @include media-breakpoint-only(sm) {
+    column-count: 1;
+  }
+  @include media-breakpoint-only(md) {
+    column-count: 3;
+  }
+  @include media-breakpoint-only(lg) {
+    column-count: 3;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 4;
+  }
+}
+*/

@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+	<!--meta charset="utf-8"-->
+	<title>Bilesu lietotne</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+	
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="custom.css">
+
+	<!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</head>
+<body style="background-color: #4f575f;" class="text-light">
+
+<!-- As a heading -->
+<nav class="mx-auto navbar navbar-expand-lg navbar-dark bg-dark">
+ <div class="mx-auto"><a class="navbar-brand" href="#"><img src="logo.png" width="45" height="45" class="align-top rounded mx-auto d-block" alt="Ticket"><h6 style="margin-top: 5px; margin-bottom: 0px;">Manas biļetes</h6></a></div>
+</nav>
+
+<nav style="background-color: #1c2125;" class="navbar navbar-expand-lg fixed-bottom">
+	<div class="row mx-auto">
+		<div class="col">
+		  <a class="nav-link active text-light" href="#"><img src="my.png" width="35" height="35" class="align-top rounded mx-auto d-block" alt="Ticket"> <h5>Biļetes</h5></a>
+		</div>
+		<div class="col">
+		  <a class="nav-link active text-light" href="#"><img src="buy.png" width="35" height="35" class="align-top rounded mx-auto d-block" alt="Ticket"> <h5>Pirkt</h5></a>
+		</div>
+		<div class="col">
+		  <a class="nav-link active text-light" href="#"><img src="fav.png" width="35" height="35" class="align-top rounded mx-auto d-block" alt="Ticket"> <h5>Favorīti</h5></a>
+		</div>
+	</div>
+</nav>
+
+<div style="max-width: 1000px; padding: 0px;" class="container-fluid bg-dark">
+
+	<div id="accordion" role="tablist">
+	  <div class="card border-0">
+		<div class="card-header bg-success" role="tab" id="headingOne">
+		  <h5 class="mb-0 text-center">
+			<a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="text-white">
+			  Pirmais pasākums
+			</a>
+		  </h5>
+		</div>
+
+		<div id="collapseOne" class="show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+  		<div class="event">
+	  		<!--img src="p1.jpg" width="100%"-->
+	  	</div>
+		  <div class="card-body bg-dark">
+			Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+		  </div>
+		</div>
+	  </div>
+	  <div class="card border-0">
+		<div class="card-header bg-warning" role="tab" id="headingTwo">
+		  <h5 class="mb-0 text-center">
+			<a data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="text-white">
+			  Otrais pasākums
+			</a>
+		  </h5>
+		</div>
+		<div id="collapseTwo" class="show" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+		  <div class="card-body bg-dark">
+			Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+		  </div>
+		</div>
+	  </div>
+	  <div class="card border-0">
+		<div class="card-header bg-info" role="tab" id="headingThree">
+		  <h5 class="mb-0 text-center">
+			<a data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="text-white">
+			  Trešais pasākums
+			</a>
+		  </h5>
+		</div>
+		<div id="collapseThree" class="show" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+		  <div class="card-body bg-dark">
+			Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+		  </div>
+		</div>
+	  </div>
+	</div>
+</div>
+</body>
+</html>
