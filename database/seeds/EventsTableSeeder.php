@@ -48,5 +48,37 @@ class EventsTableSeeder extends Seeder
         'created_at' => '2017-11-07 16:10:46',
         'updated_at' => '2017-11-07 16:10:46',
         'place_id' => 1 ));
+      Event::create(array(
+        'id' => 5,
+        'name' => 'Jāņu nakts',
+        'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor',
+        'date' => '2018-06-23 23:59:59',
+        'created_at' => '2017-11-07 16:10:46',
+        'updated_at' => '2017-11-07 16:10:46',
+        'place_id' => 5 ));
+      Event::create(array(
+        'id' => 6,
+        'name' => 'Kaut kas īpašs',
+        'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor',
+        'date' => '2018-03-01 01:03:01',
+        'created_at' => '2017-11-07 16:10:46',
+        'updated_at' => '2017-11-07 16:10:46',
+        'place_id' => 6 ));
+      Event::create(array(
+        'id' => 7,
+        'name' => 'Ražas svētki',
+        'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor',
+        'date' => '2018-10-21 10:00:00',
+        'created_at' => '2017-11-07 16:10:46',
+        'updated_at' => '2017-11-07 16:10:46',
+        'place_id' => 4 ));
+      Event::create(array(
+        'id' => 8,
+        'name' => 'Siers',
+        'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor',
+        'date' => '2017-12-31 23:59:59',
+        'created_at' => '2017-11-07 16:10:46',
+        'updated_at' => '2017-11-07 16:10:46',
+        'place_id' => 7 ));
     }
 }

@@ -33,5 +33,20 @@ class PlaceTableSeeder extends Seeder
           'name' => 'Lucavsala',
           'lat' => 56.925865,
           'long' => 24.120038));
+        Place::create(array(
+          'id' => 5,
+          'name' => 'Latvijas universitāte',
+          'lat' => 56.950572,
+          'long' => 24.115798));
+        Place::create(array(
+          'id' => 6,
+          'name' => 'Brīvības piemineklis',
+          'lat' => 56.951435,
+          'long' => 24.113230));
+        Place::create(array(
+          'id' => 7,
+          'name' => 'Vērmanes dārzs',
+          'lat' => 56.951133,
+          'long' => 24.118895));
     }
 }

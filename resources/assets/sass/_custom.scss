@@ -44,14 +44,11 @@
 .info-text{
   text-shadow: 0px 2px 4px black;
   font-size: 85%;
+  overflow-wrap: normal;
 }
 
 strong.info-text {
   font-size: 100%;
-}
-
-body{
-  background-color: black;
 }
 
 dl {

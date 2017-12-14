@@ -5,7 +5,7 @@
   <header>
     <div class="jumbotron">
       <h1 class="display-3">Biļešu lietotne</h1>
-      <p class="lead">Šī ir moderna biļešu sistēma, kas atvieglo biļešu pirkšanas un pārdošanas procesu ar modernu un drošu blokķēžu risinājumu.</p>
+      <p class="lead">Šī ir biļešu sistēma, kas atvieglo biļešu pirkšanas un pārdošanas procesu ar modernu un drošu blokķēžu risinājumu.</p>
       <hr class="my-4">
       <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
       <p class="lead">

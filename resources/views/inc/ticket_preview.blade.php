@@ -1,4 +1,5 @@
 <div class="col-12 col-sm-12 col-md-6 col-xl-4">
+  <a href="ticket/{{$tick->id}}">
   <div class="card text-white bg-dark mb-3">
     <img class="card-img-top" src="{{ asset( $tick->events->images()['asset_path'].$tick->events->images()['image_small'] ) }}" alt="Card image cap">
         <div class="card-img-overlay">
@@ -75,5 +76,5 @@
     <div class="card-footer">
       <p class="card-text"><small class="text-muted">Last updated {{ date('h:t d.m.y', strtotime($tick->updated_at)) }}</small></p>
     </div>
-  </div>
+  </div></a>
 </div>
