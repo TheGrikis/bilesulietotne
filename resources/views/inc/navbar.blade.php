@@ -9,19 +9,19 @@
             <ul class="navbar-nav mr-auto">
                 &nbsp;
                 @if (Auth::guest())
-                    <li class="nav-item"><a class="nav-link" href="#about-us">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about-us">Par mums</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontakti</a></li>
                 @else
-                    <li class="nav-item @if ( Route::is('/')) active @endif">
+                    <li class="nav-item @if ( Request::is('/')) active @endif">
                         <a class="nav-link" href="/">Sākums</a>
                     </li>
-                    <li class="nav-item  @if ( Route::is('events')) active @endif">
+                    <li class="nav-item  @if ( Request::is('events')) active @endif">
                       <a class="nav-link" href="/events">Pasākumi</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/tickets">Biļetes</a>
+                    <li class="nav-item @if ( Request::is('tickets')) active @endif">
+                        <a class="nav-link" href="/tickets">Manas biļetes</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item @if ( Request::is('map')) active @endif">
                         <a class="nav-link" href="/map">Karte</a>
                     </li>
                 @endif
@@ -41,3 +41,6 @@
         </div>
     </div>
 </nav>
+@unless ( Request::is('map'))
+<br>
+@endunless
