@@ -9719,15 +9719,16 @@ a.text-dark:hover {
 
 /* The heart of the matter */
 
+/*
 .testimonial-group > .row {
   overflow-x: auto;
   white-space: nowrap;
 }
-
 .testimonial-group > .row > .col-xs-8 {
   display: inline-block;
   float: none;
 }
+*/
 
 ::-webkit-scrollbar {
   display: none;
@@ -9744,29 +9745,21 @@ a.text-dark:hover {
   margin: 0;
 }
 
-/*
-.ticket {
-  padding-top: 10px;
-  margin-top:30px;
-  background-color: rgb(20,20,20);
-}
-
-.ticket-dark-overlay{
-    background-color: rgba(255,0,0,100)
-}
-
-.list-group-item-dark{
-  background-color: black;
-  color: white;
-  border-color: white;
-}
-
-
 .card {
-  //max-width: 400px;
-  //min-width: 250px;
+  overflow: hidden;
 }
-*/
+
+.card-img-top {
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.card-body {
+  background-color: #32383e;
+  z-index: 5;
+}
 
 .info-text {
   text-shadow: 0px 2px 4px black;
@@ -9789,25 +9782,23 @@ html {
   font-size: 1rem;
 }
 
+html {
+  font-size: 0.8em;
+}
+
+@media (min-width: 576px) {
+  html {
+    font-size: 0.9em;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 1em;
+  }
+}
+
 /*
-@include media-breakpoint-up(xs) {
-  html {
-    font-size: 0.7rem;
-  }
-}
-
-@include media-breakpoint-up(sm) {
-  html {
-    font-size: 1.4vw;
-  }
-}
-
-@include media-breakpoint-up(md) {
-  html {
-    font-size: 1.3vw;
-  }
-}
-
 @include media-breakpoint-up(lg) {
   html {
     font-size: 1.2vw;
@@ -9817,25 +9808,6 @@ html {
 @include media-breakpoint-up(xl) {
   html {
     font-size: 0.6vw;
-  }
-}
-
-.ticket-info{
-
-}
-
-.card-columns {
-  @include media-breakpoint-only(sm) {
-    column-count: 1;
-  }
-  @include media-breakpoint-only(md) {
-    column-count: 3;
-  }
-  @include media-breakpoint-only(lg) {
-    column-count: 3;
-  }
-  @include media-breakpoint-only(xl) {
-    column-count: 4;
   }
 }
 */
@@ -9864,15 +9836,15 @@ html {
   from {
     -webkit-filter: blur(4px);
             filter: blur(4px);
-    left: -2.5%;
-    top: -2.5%;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 
   to {
     -webkit-filter: blur(0px);
             filter: blur(0px);
-    left: 0;
-    top: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -9880,21 +9852,16 @@ html {
   from {
     -webkit-filter: blur(4px);
             filter: blur(4px);
-    left: -2.5%;
-    top: -2.5%;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 
   to {
     -webkit-filter: blur(0px);
             filter: blur(0px);
-    left: 0;
-    top: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
-}
-
-.card-img-top {
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
 }
 
 .card:hover .card-img-top {
