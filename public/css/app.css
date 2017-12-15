@@ -9741,6 +9741,13 @@ a.text-dark:hover {
           filter: invert(80%) hue-rotate(180deg) contrast(165%) saturate(20%) brightness(150%) grayscale(100%);
 }
 
+#map-i {
+  height: 30vh;
+  width: 100%;
+  -webkit-filter: invert(80%) hue-rotate(180deg) contrast(165%) saturate(20%) brightness(150%) grayscale(100%);
+          filter: invert(80%) hue-rotate(180deg) contrast(165%) saturate(20%) brightness(150%) grayscale(100%);
+}
+
 .navbar {
   margin: 0;
 }

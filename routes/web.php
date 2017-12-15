@@ -21,5 +21,5 @@ Route::get('/', function () {
 
 Route::get('events', 'EventController@index');
 Route::get('tickets', 'TicketController@index');
-Route::get('tickets/{ticket_id}', 'TicketController@show');
+Route::get('ticket/{ticket_id}', 'TicketController@show');
 Route::get('map', 'MapController@index');

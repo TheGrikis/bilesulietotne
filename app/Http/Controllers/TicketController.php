@@ -18,7 +18,7 @@ class TicketController extends Controller
        ));
     }
 
-    public function show(Ticket $ticket_id){
+    public function show($ticket_id){
         return view('ticket',
              compact('ticket_id'),
              array('tick' => Ticket::findOrFail($ticket_id))

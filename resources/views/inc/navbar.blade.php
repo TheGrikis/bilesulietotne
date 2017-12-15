@@ -41,6 +41,6 @@
         </div>
     </div>
 </nav>
-@unless ( Request::is('map'))
+@unless ( Request::is('map') || Request::is('ticket/{ticket_id}'))
 <br>
 @endunless
