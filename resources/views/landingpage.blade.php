@@ -14,7 +14,7 @@
     </div>
   </header>
 
-  <section class="bg-primary" id="about">
+  <!--section class="bg-primary" id="about">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto text-center">
@@ -196,7 +196,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section!-->
 </div>
 
 

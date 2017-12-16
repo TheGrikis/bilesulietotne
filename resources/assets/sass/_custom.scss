@@ -25,6 +25,10 @@
 	filter: invert(80%) hue-rotate(180deg) contrast(165%) saturate(20%) brightness(150%) grayscale(100%);
 }
 
+.logo{
+  width: 25px;
+}
+
 .navbar {
   margin: 0;
 }
@@ -35,6 +39,10 @@
   //max-width: 400px;
   //min-width: 250px;
   overflow: hidden;
+}
+
+.panel-body{
+  padding: 10px;
 }
 
 .card-img-top{

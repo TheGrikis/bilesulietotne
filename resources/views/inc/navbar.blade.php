@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">Biļešu lietotne</a>
+        <a class="navbar-brand" href="#"><img class="img-fluid rounded mx-auto d-block logo" src="{{ asset('assets/images/logo.png') }}" alt="Card image cap"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 &nbsp;
                 @if (Auth::guest())
@@ -25,19 +25,19 @@
                         <a class="nav-link" href="/map">Karte</a>
                     </li>
                 @endif
-
             </ul>
-
+            <ul class="navbar-nav mr-right">
             @if (Auth::guest())
-                <li><a href="{{ route('login') }}"><button class="btn btn-outline-success my-2 my-sm-0">Login</button></a></li>
-                <li><a href="{{ route('register') }}"><button class="btn btn-outline-success my-2 my-sm-0">Register</button></a></li>
+                <li class="nav-item"><a href="{{ route('login') }}"><button class="btn btn-outline-success my-2 my-sm-0">Login</button></a></li>
+                <li class="nav-item"><a href="{{ route('register') }}"><button class="btn btn-success my-2 my-sm-0">Register</button></a></li>
                 @else
-                <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><button class="btn btn-outline-success my-2 my-sm-0">Logout</button></a>
+                <li class="nav-item"><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><button class="btn btn-outline-success my-2 my-sm-0">Logout</button></a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                        {{ csrf_field() }}
                     </form>
                 </li>
             @endif
+                </ul>
         </div>
     </div>
 </nav>

@@ -9748,12 +9748,20 @@ a.text-dark:hover {
           filter: invert(80%) hue-rotate(180deg) contrast(165%) saturate(20%) brightness(150%) grayscale(100%);
 }
 
+.logo {
+  width: 25px;
+}
+
 .navbar {
   margin: 0;
 }
 
 .card {
   overflow: hidden;
+}
+
+.panel-body {
+  padding: 10px;
 }
 
 .card-img-top {
