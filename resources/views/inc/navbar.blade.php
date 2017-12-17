@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-static-top">
     <div class="container">
         <a class="navbar-brand" href="#"><img class="img-fluid rounded mx-auto d-block logo" src="{{ asset('assets/images/logo.png') }}" alt="Card image cap"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
