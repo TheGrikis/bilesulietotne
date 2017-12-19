@@ -31,11 +31,18 @@
                 <li class="nav-item"><a href="{{ route('login') }}"><button class="btn btn-outline-success my-2 my-sm-0">Login</button></a></li>
                 <li class="nav-item"><a href="{{ route('register') }}"><button class="btn btn-success my-2 my-sm-0">Register</button></a></li>
                 @else
+                  <li class="nav-item">
+                        <a class="nav-link" style="pointer-events: none; cursor: default;" href="">{{ Auth::user()->name }}</a>
+                </li>
+                <li class="nav-item">
+                    <a id="bilance" class="nav-link" style="pointer-events: none; cursor: default;" href="">0 ETH</a>
+                </li>
                 <li class="nav-item"><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><button class="btn btn-outline-success my-2 my-sm-0">Logout</button></a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                        {{ csrf_field() }}
                     </form>
                 </li>
+  
             @endif
                 </ul>
         </div>
