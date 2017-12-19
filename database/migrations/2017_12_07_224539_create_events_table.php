@@ -12,6 +12,7 @@ class CreateEventsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('description');
+            $table->string('contractname')->nullable();
             $table->integer('seat_count')->nullable();
             $table->dateTime('date');
             $table->timestamps();

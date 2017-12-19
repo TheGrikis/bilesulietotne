@@ -21,6 +21,7 @@
                   <strong class="info-text">{{date('h:t', strtotime($event->date))}}</strong>
                 </div>
             </div>
+            <div id="price"></div>
           </div>
               <a href="#" class="btn btn-primary mt-3">Pirkt biļeti</a>
           </div>
@@ -31,6 +32,11 @@
 </div>
 
 
+
+@endsection
+
+
+@section('scripts')
 <script>
     function initMap() {
 
@@ -59,5 +65,28 @@
 
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxezRtAbO_-Gz5qkAgInTJtvTwNvPGekg&callback=initMap">
+</script>
+
+<script>
+
+  
+
+  $( document ).ready(function() {
+    {!! $abi= $abi ? $abi: 0 !!}
+
+    var contractAbi={!! $abi !!};
+    var contractAddress = "{!! $address !!}";
+
+    if (contractAbi && contractAddress){
+      var contract = web3.eth.contract(contractAbi).at(contractAddress);
+
+      var ticketName = contract.ticketTypes(0)[0].toString();
+      var ticketPrice = web3.fromWei(contract.ticketTypes(0)[1].toString(), 'ether');
+
+      $( "#price" ).text(ticketPrice+" ETH");
+    }
+
+  });
+
 </script>
 @endsection

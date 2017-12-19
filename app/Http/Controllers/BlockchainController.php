@@ -25,7 +25,7 @@ class BlockchainController extends Controller
 		foreach ($users as $user) {
 		    $user->update([ 'ethwallet'=>$data['wallet'][$i] ]);
 		    $i++;
-		    return redirect()->to('/');
 		}
+		return redirect()->to('/');
     }
 }
