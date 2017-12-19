@@ -14,7 +14,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
 Route::get('/', function () {
     return view('landingpage');
 });
@@ -24,3 +23,4 @@ Route::get('event/{id}', 'EventController@show');
 Route::get('tickets', 'TicketController@index');
 Route::get('ticket/{ticket_id}', 'TicketController@show');
 Route::get('map', 'MapController@index');
+Route::resource('addwallets', 'BlockchainController', ['only' => ['index', 'store']]);
