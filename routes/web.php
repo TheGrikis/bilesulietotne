@@ -20,6 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('events', 'EventController@index');
+Route::get('event/{id}', 'EventController@show');
 Route::get('tickets', 'TicketController@index');
 Route::get('ticket/{ticket_id}', 'TicketController@show');
 Route::get('map', 'MapController@index');
