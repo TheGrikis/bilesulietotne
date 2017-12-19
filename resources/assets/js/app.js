@@ -6,6 +6,8 @@
  */
 
 require('./bootstrap');
+require('./fontawesome-all');
+
 window.Vue = require('vue');
 
 /**
@@ -14,15 +16,8 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
 const app = new Vue({
     el: '#app'
 });
-
-
-try {
-    window.$ = window.jQuery = require('jquery');
-    window.Popper = require('popper.js').default;
-    require('bootstrap');
-} catch (e) {}
