@@ -21,11 +21,10 @@
               title:"{{$event->name}}",
               map: map
             });
+
         @endforeach
 
-        marker.addListener('click', function() {
-          infowindow.open(map, marker);
-        });
+
 
 
     }

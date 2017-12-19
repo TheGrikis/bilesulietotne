@@ -40,21 +40,21 @@
 <script>
     function initMap() {
 
-          var uluru0 = {lat: {{ $event->places->lat }}, lng: {{ $event->places->long }} };
+        var uluru = {lat: {{ $event->places->lat }}, lng: {{ $event->places->long }} };
 
 
         var map = new google.maps.Map(document.getElementById('map-i'), {
             zoom: 12,
-            center: uluru0,
+            center: uluru,
             disableDefaultUI: true
         });
 
-            var marker0 = new google.maps.Marker({
-              position: uluru0,
-              animation: google.maps.Animation.DROP,
-              title:"{{$event->name}}",
-              map: map
-            });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          animation: google.maps.Animation.DROP,
+          title:"{{$event->name}}",
+          map: map
+        });
 
         marker.addListener('click', function() {
           infowindow.open(map, marker);
@@ -69,7 +69,7 @@
 
 <script>
 
-  
+
 
   $( document ).ready(function() {
     {!! $abi= $abi ? $abi: 0 !!}
