@@ -15,7 +15,7 @@ class PlaceTableSeeder extends Seeder
         Place::truncate();
         Place::create(array(
           'id' => 1,
-          'name' => '11. novembra krastmala',
+          'name' => 'Krastmala',
           'lat' => 56.9493099,
           'long' => 24.1009177));
         Place::create(array(
