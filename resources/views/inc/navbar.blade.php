@@ -9,12 +9,12 @@
             <ul class="navbar-nav mr-auto">
                 &nbsp;
                 @if (Auth::guest())
-                    <li class="nav-item"><a class="nav-link" href="#about-us">Par mums</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Kontakti</a></li>
-                @else
                     <li class="nav-item @if ( Request::is('/')) active @endif">
                         <a class="nav-link" href="/">Sākums</a>
                     </li>
+                    <li class="nav-item"><a class="nav-link" href="#about-us">Par mums</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontakti</a></li>
+                @else
                     <li class="nav-item  @if ( Request::is('events')) active @endif">
                       <a class="nav-link" href="/events">Pasākumi</a>
                     </li>
