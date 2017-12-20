@@ -9,7 +9,7 @@
               <h6 class="card-subtitle mb-2 text-muted">{{ $event->description }}</h6>
               <p class="card-text"></p>
               <img class="img-fluid" src="{{ asset( $event->images()['asset_path'].$event->images()['image_large'] ) }}" alt="">
-              <div class="card-img-overlay">
+              <div class="">
           </div>
           <div class="card-footer">
             <div class="row">
@@ -21,9 +21,11 @@
                   <strong class="info-text">{{date('h:t', strtotime($event->date))}}</strong>
                 </div>
             </div>
+            <div id="ticketType"></div>
+            <div id="remaining"></div>
             <div id="price"></div>
           </div>
-              <a href="#" class="btn btn-primary mt-3">Pirkt biļeti</a>
+              <a href="#" id="buy" class="btn btn-primary mt-3">Pirkt biļeti</a>
           </div>
           <div id="map-i"></div>
       </div>
@@ -71,7 +73,7 @@
 
 
 
-  $( document ).ready(function() {
+  //$( document ).ready(function() {
     {!! $abi= $abi ? $abi: 0 !!}
 
     var contractAbi={!! $abi !!};
@@ -80,13 +82,32 @@
     if (contractAbi && contractAddress){
       var contract = web3.eth.contract(contractAbi).at(contractAddress);
 
-      var ticketName = contract.ticketTypes(0)[0].toString();
-      var ticketPrice = web3.fromWei(contract.ticketTypes(0)[1].toString(), 'ether');
+      //var ticketName = contract.ticketTypes(0)[0].toString();
+      //var ticketPrice = web3.fromWei(contract.ticketTypes(0)[1].toString(), 'ether');
 
-      $( "#price" ).text(ticketPrice+" ETH");
+      $( "#remaining" ).text("Atlikušo biļešu skaits: "+contract.ticketsLeft(0).toString());
+      $( "#price" ).text("Cena: "+web3.fromWei(contract.ticketTypes(0)[1].toString(), 'ether')+" ETH");
+
+      $( "#ticketType" ).append( "<select id='Types'></select>" );
+      for (var i=0; i<contract.ticketTypesCount().toString(); i++){
+        $('#Types').append('<option value='+i+'>'+contract.ticketTypes(i)[0].toString()+'</option>');
+      }
+
+      $('#Types').on('change', function() {
+        $( "#remaining" ).text("Atlikušo biļešu skaits: "+contract.ticketsLeft(this.value).toString());
+        $( "#price" ).text("Cena: "+web3.fromWei(contract.ticketTypes(this.value)[1].toString(), 'ether')+" ETH");
+      })
+
     }
 
-  });
+  //});
+
+    $("#buy").click(function() {
+      type=$( "#Types option:selected" ).val();
+      price=contract.ticketTypes(type)[1].toString();
+      contract.buyTicket.sendTransaction(type, {from: "{!! Auth::user()->ethwallet !!}", value: price});
+      updateBalance();
+    });
 
 </script>
 @endsection
