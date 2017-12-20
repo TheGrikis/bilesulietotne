@@ -22,6 +22,10 @@ contract Festival{
 		ticketTypes.push(ticketType({name:"Priority", price:19.99 ether, totalTickets:100, boughtTickets:0}));
 		ticketTypes.push(ticketType({name:"VIP", price:29.99 ether, totalTickets:100, boughtTickets:0}));
 	}
+	
+	function ticketTypesCount() public view returns (uint){
+	    return ticketTypes.length;
+	}
 
 	function buyTicket(uint tType) public payable returns (uint){
 		if (tType>=ticketTypes.length)
