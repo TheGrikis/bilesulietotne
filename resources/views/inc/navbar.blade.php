@@ -14,7 +14,7 @@
                     </li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/#services">Risinājums</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/#about">Par mums</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/#contact">Sazinieties</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/#contact">Saziņa</a></li>
                 @else
                     <li class="nav-item  @if ( Request::is('events')) active @endif">
                       <a class="nav-link" href="/events">Pasākumi</a>
