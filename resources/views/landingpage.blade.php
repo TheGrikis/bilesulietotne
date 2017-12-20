@@ -54,7 +54,7 @@
     </nav-->
 
     <!-- Header -->
-    <header class="masthead text-white">
+    <header id="start" class="masthead text-white">
       <div class="container">
         <div class="intro-text">
           <div class="intro-lead-in">Sveiki!</div>
@@ -663,7 +663,13 @@
         </div>
       </div>
     </div>
+    <!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="js/agency.min.js"></script>
   </body>
 
 </html>

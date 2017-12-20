@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container my-3">
-    <div class="row justify-content-center">
+<div class="container my-5">
+    <div class="row justify-content-center pt-5">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading text-muted"><h5>Login</h5></div>
