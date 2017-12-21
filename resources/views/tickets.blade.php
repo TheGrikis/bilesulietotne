@@ -33,8 +33,8 @@
 	    	else {
 	    		$( "#No"+(100+i) ).find("#ticketcounttext").text("Skaits");
 	    		$( "#No"+(100+i) ).find("#ticketcount").text(ticketcount);
-	    		$( "#No"+(100+i) ).find("#typetext").text(contract.ticketTypes(i)[0].toString());
-	    		$( "#No"+(100+i) ).find("#type").text(ticketcount);
+	    		$( "#No"+(100+i) ).find("#typetext").text("Tips");
+	    		$( "#No"+(100+i) ).find("#type").text(contract.ticketTypes(i)[0].toString());
 	    	}
 		}
 	}
