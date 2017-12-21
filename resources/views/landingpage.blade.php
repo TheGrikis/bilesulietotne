@@ -28,8 +28,8 @@
     <header id="start" class="masthead text-white">
       <div class="container">
         <div class="intro-text">
-          <div class="intro-lead-in">Sveiki!</div>
-          <div class="intro-heading text-uppercase">Biļešu vietne</div>
+
+          <div class="intro-heading text-uppercase">Biļešu lietotne</div>
           <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Uzzināt vairāk!</a>
         </div>
       </div>
@@ -74,11 +74,11 @@
     </section>
 
     <!-- About -->
-    <section id="about">
+    <!--section id="about">
       <div class="container text-light">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">About</h2>
+            <h2 class="section-heading text-uppercase">Par mums</h2>
             <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
           </div>
         </div>
@@ -152,7 +152,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section-->
 
     <!-- Contact -->
     <section id="contact">
