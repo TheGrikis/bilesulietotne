@@ -33,7 +33,14 @@
                 <li class="nav-item"><a href="{{ route('login') }}"><button class="btn btn-outline-primary my-2 my-sm-0 mx-2">Login</button></a><a href="{{ route('register') }}"><button class="btn btn-primary my-2 my-sm-0 mx-2">Register</button></a></li>
                 @else
                   <li class="nav-item mx-2 mt-3 mt-md-0">
-                        <strong><a class="nav-link" style="pointer-events: none; cursor: default;" href="">Welcome, {{ Auth::user()->name }}!</a></strong>
+                        <strong>
+                            <div class="dropdown">
+                                <div class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor: default;">Welcome, {{ Auth::user()->name }}!</div>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <div class="dropdown-item" id="ethwallet" href="#">Action</div>
+                                </div>
+                            </div>
+                        </strong>
                 </li>
                 <li class="nav-item mx-2">
                     <strong><a id="bilance" class="nav-link" style="pointer-events: none; cursor: default;" href="">0 ETH</a></strong>

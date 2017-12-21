@@ -12,6 +12,8 @@ class CreateTicketsTable extends Migration
             $table->increments('id');
             $table->integer('seat')->nullable();
             $table->integer('row')->nullable();
+            $table->integer('type')->nullable();
+            $table->integer('count')->nullable();
             $table->string('sector')->nullable();
             $table->timestamps();
         });

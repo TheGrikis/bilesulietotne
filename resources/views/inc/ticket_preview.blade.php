@@ -1,4 +1,4 @@
-<div class="col-12 col-sm-12 col-md-6 col-xl-4">
+<div class="col-12 col-sm-12 col-md-6 col-xl-4" id="No{{$tick->id}}">
   <a href="ticket/{{$tick->id}}">
   <div class="card text-white bg-dark mb-3">
     <img class="card-img-top" src="{{ asset( $tick->events->images()['asset_path'].$tick->events->images()['image_small'] ) }}" alt="Card image cap">
@@ -67,6 +67,45 @@
               </div>
             </h5>
           </div>
+
+          <div class="col-12 col-sm-4 text-sm-center text-md-left align-self-end">
+              <h5 class="text-uppercase">
+                <div class="row  text-nowrap">
+                  <div class="col-6 col-sm-12 text-right text-sm-left">
+                    <p class="info-text" id="typetext"></p>
+                  </div>
+                  <div class="w-100 d-none d-sm-block"></div>
+                  <div class="col-6 col-sm-12 text-left">
+                    <strong class="info-text" id="type"></strong>
+                  </div>
+                </div>
+              </h5>
+          </div>
+          <div class="col-12 col-sm-4 text-sm-center text-md-middle">
+              <h5 class="text-uppercase">
+                <div class="row">
+                  <div class="col-6 col-sm-12 text-right text-sm-center">
+                  </div>
+                  <div class="w-100 d-none d-sm-block"></div>
+                  <div class="col-6 col-sm-12 text-left text-sm-center">
+                  </div>
+                </div>
+              </h5>
+          </div>
+          <div class="col-12 col-sm-4 text-sm-center text-md-right">
+            <h5 class="text-uppercase">
+              <div class="row">
+                <div class="col-6 col-sm-12 text-right">
+                  <p class="info-text" id="ticketcounttext"></p>
+                </div>
+                <div class="w-100 d-none d-sm-block"></div>
+                <div class="col-6 col-sm-12 text-left text-sm-right">
+                  <strong class="info-text" id="ticketcount"></strong>
+                </div>
+              </div>
+            </h5>
+          </div>
+
       </div>
     </div>
     <div class="card-body">

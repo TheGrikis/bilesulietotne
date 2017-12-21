@@ -6,6 +6,7 @@
 
 @if (Auth::user())
 	$( document ).ready(function() {
+		$('#ethwallet').text("{!! Auth::user()->ethwallet !!}")
 		updateBalance();
 	});
 
@@ -14,5 +15,9 @@
 		eth=eth.slice(0, (eth.indexOf("."))+4);
 		$( "#bilance" ).text(eth +" ETH");
 	}
+
+	$('#ethwallet').click(function() {
+    	window.prompt("Copy to clipboard: Ctrl+C, Enter", "{!! Auth::user()->ethwallet !!}");
+	});
 @endif
 </script>
