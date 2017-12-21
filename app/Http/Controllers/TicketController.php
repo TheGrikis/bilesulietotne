@@ -52,7 +52,8 @@ class TicketController extends Controller
           return view('ticket',
                compact('ticket_id'),
                array('tick' => Ticket::findOrFail($ticket_id),
-                  'notifications' => Notification::where('event_id', Ticket::findOrFail($ticket_id)->event_id)->get())
+                  'notifications' => Notification::where('event_id', Ticket::findOrFail($ticket_id)->event_id)->get(),
+                  "abi" => "", "address" => "")
                   //'noti' => Notification::where('event_id', Ticket::findOrFail($ticket_id)->event_id)->first())
           );
       else{
