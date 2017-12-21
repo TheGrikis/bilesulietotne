@@ -32,7 +32,6 @@ class TicketController extends Controller
         $tickets2=array();
         for($i=0; $i<3; $i++) {
           $ticket = new Ticket();
-          $ticket->count = 0;
           $ticket->updated_at = "2017-12-21 11:56:00";
           $ticket->events()->associate(Event::find(4));
           $ticket->id = $i+100;
@@ -49,11 +48,40 @@ class TicketController extends Controller
 
     public function show($ticket_id){
         //dd(Ticket::findOrFail($ticket_id)->event_id);
-        return view('ticket',
+      if ($ticket_id<100)
+          return view('ticket',
+               compact('ticket_id'),
+               array('tick' => Ticket::findOrFail($ticket_id),
+                  'notifications' => Notification::where('event_id', Ticket::findOrFail($ticket_id)->event_id)->get())
+                  //'noti' => Notification::where('event_id', Ticket::findOrFail($ticket_id)->event_id)->first())
+          );
+      else{
+          $ticket = new Ticket();
+          $ticket->updated_at = "2017-12-21 11:56:00";
+          $ticket->events()->associate(Event::find(4));
+          $ticket->id = $ticket_id;
+          $ticket->type = $ticket_id-100;
+          $tickets2[]=$ticket;
+
+          $address="";
+          $abi="";
+          $exists = Storage::disk('public')->exists('blockchain/build/contracts/Festival.json');
+          if ($exists){
+            $content = Storage::disk('public')->get('blockchain/build/contracts/Festival.json');
+            $json=json_decode($content, true);
+            $abi = json_encode($json['abi']);
+            $networks = $json['networks'];
+            foreach ($networks as $key => $val)
+              $address = $val['address'];
+          }
+
+          return view('ticket',
              compact('ticket_id'),
-             array('tick' => Ticket::findOrFail($ticket_id),
-                'notifications' => Notification::where('event_id', Ticket::findOrFail($ticket_id)->event_id)->get())
-                //'noti' => Notification::where('event_id', Ticket::findOrFail($ticket_id)->event_id)->first())
-        );
+             array('tick' => $ticket,
+                'notifications' => Notification::where('event_id', 4),
+                "abi" => $abi, "address" => $address)
+          );
+
+      }
     }
 }

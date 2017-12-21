@@ -18,6 +18,13 @@
               <div class="card-footer">
                 <div class="row">
                     <div class="col-12 text-center">
+                      <strong class="info-text">Manu biļešu skaits: </strong>
+                      <strong class="info-text" id="ticketcount"></strong>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 text-center">
                         <strong class="info-text">{{$tick->events->places->name}}</strong>
                     </div>
                     <div class="col-12 text-center">
@@ -26,7 +33,15 @@
                     </div>
                 </div>
               </div>
-              <a href="#" class="btn btn-primary mt-3">Aktivizēt biļeti</a>
+              {{-- <a href="#" class="btn btn-primary mt-3">Aktivizēt biļeti</a> --}}
+              <div class="btn btn-outline-primary dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Pārsūtīt</a>
+                <div class="dropdown-menu" style="padding: 15px; padding-bottom: 10px; margin-top:10px; margin-left:-12px; width: 315px;">
+                  <div class="form-horizontal" accept-charset="UTF-8">
+                    <input id="recieverwallet" class="form-control login" type="text" name="sp_uname" placeholder="Saņēmēja Ethereum maka numurs" />
+                    <input id="sendticket" class="btn btn-primary" style="margin-top:10px;" type="submit" value="Pārsūtīt" />
+                  </div>
+                </div>
+              </div>
           </div>
           <div id="map-i"></div>
       </div>
@@ -61,4 +76,34 @@
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxezRtAbO_-Gz5qkAgInTJtvTwNvPGekg&callback=initMap">
 </script>
+@endsection
+
+@section('scripts')
+  <script>
+
+      {!! $abi= $abi ? $abi: 0 !!}
+
+      var contractAbi={!! $abi !!};
+      var contractAddress = "{!! $address !!}";
+
+      if (contractAbi && contractAddress){
+        var contract = web3.eth.contract(contractAbi).at(contractAddress);
+
+        updateticketcount();
+
+
+        
+        $("#sendticket").click(function() {
+          to=$("#recieverwallet").val();
+          contract.sendTo.sendTransaction(to, {{$tick->type}}, {from: "{!! Auth::user()->ethwallet !!}"});
+          updateticketcount();
+        });
+      }
+
+      function updateticketcount(){
+        ticketcount = contract.myTicketsCount.call({!! $tick->type !!}, {from: "{!! Auth::user()->ethwallet !!}"});
+        $("#ticketcount").text(ticketcount);
+      }
+
+  </script>
 @endsection

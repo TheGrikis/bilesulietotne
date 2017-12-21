@@ -35,7 +35,7 @@
                   <li class="nav-item mx-2 mt-3 mt-md-0">
                         <strong>
                             <div class="dropdown">
-                                <div class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor: default;">Welcome, {{ Auth::user()->name }}!</div>
+                                <div class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor: default;">Welcome, {{ Auth::user()->name }}!</div>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <div class="dropdown-item" id="ethwallet" href="#">Action</div>
                                 </div>
